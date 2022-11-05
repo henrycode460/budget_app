@@ -10,34 +10,34 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 20_221_102_134_015) do
+ActiveRecord::Schema[7.0].define(version: 20_221_011_163_049) do
   # These are extensions that must be enabled in order to support this database
   enable_extension 'plpgsql'
 
-  create_table 'entities', force: :cascade do |t|
+  create_table 'budgets', force: :cascade do |t|
     t.string 'name'
     t.decimal 'amount'
-    t.bigint 'user_id', null: false
     t.datetime 'created_at', null: false
     t.datetime 'updated_at', null: false
-    t.index ['user_id'], name: 'index_entities_on_user_id'
+    t.bigint 'user_id', null: false
+    t.index ['user_id'], name: 'index_budgets_on_user_id'
   end
 
-  create_table 'group_entities', force: :cascade do |t|
-    t.bigint 'group_id', null: false
-    t.bigint 'entity_id', null: false
+  create_table 'budgets_groups', force: :cascade do |t|
     t.datetime 'created_at', null: false
     t.datetime 'updated_at', null: false
-    t.index ['entity_id'], name: 'index_group_entities_on_entity_id'
-    t.index ['group_id'], name: 'index_group_entities_on_group_id'
+    t.bigint 'group_id', null: false
+    t.bigint 'budget_id', null: false
+    t.index ['budget_id'], name: 'index_budgets_groups_on_budget_id'
+    t.index ['group_id'], name: 'index_budgets_groups_on_group_id'
   end
 
   create_table 'groups', force: :cascade do |t|
     t.string 'name'
     t.string 'icon'
-    t.bigint 'user_id', null: false
     t.datetime 'created_at', null: false
     t.datetime 'updated_at', null: false
+    t.bigint 'user_id', null: false
     t.index ['user_id'], name: 'index_groups_on_user_id'
   end
 
@@ -50,13 +50,26 @@ ActiveRecord::Schema[7.0].define(version: 20_221_102_134_015) do
     t.string 'reset_password_token'
     t.datetime 'reset_password_sent_at'
     t.datetime 'remember_created_at'
-    t.string 'role'
+    t.integer 'sign_in_count', default: 0, null: false
+    t.datetime 'current_sign_in_at'
+    t.datetime 'last_sign_in_at'
+    t.string 'current_sign_in_ip'
+    t.string 'last_sign_in_ip'
+    t.string 'confirmation_token'
+    t.datetime 'confirmed_at'
+    t.datetime 'confirmation_sent_at'
+    t.string 'unconfirmed_email'
+    t.integer 'failed_attempts', default: 0, null: false
+    t.string 'unlock_token'
+    t.datetime 'locked_at'
+    t.index ['confirmation_token'], name: 'index_users_on_confirmation_token', unique: true
     t.index ['email'], name: 'index_users_on_email', unique: true
     t.index ['reset_password_token'], name: 'index_users_on_reset_password_token', unique: true
+    t.index ['unlock_token'], name: 'index_users_on_unlock_token', unique: true
   end
 
-  add_foreign_key 'entities', 'users'
-  add_foreign_key 'group_entities', 'entities'
-  add_foreign_key 'group_entities', 'groups'
+  add_foreign_key 'budgets', 'users'
+  add_foreign_key 'budgets_groups', 'budgets'
+  add_foreign_key 'budgets_groups', 'groups'
   add_foreign_key 'groups', 'users'
 end
