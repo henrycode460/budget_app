@@ -14,7 +14,7 @@
 ## Live Demo (if available)
 
 [Live Demo Link](https://budgetory.herokuapp.com/)
-[Video Link](https://loom.com/share/52ab778e34bc463bbb57d1b43defe33d)
+[Video Link](https://drive.google.com/file/d1haNfmjVnUuTGzp4eReXa0kd_Y_hvjliC/view?usp=share_link)
 
 
 ## Getting Started
