@@ -11,9 +11,10 @@
 - Bootsrap
 - Git 
 
-## Live Demo (if available)
+## Live Demo 
 
 [Live Demo Link](https://transaction-system.herokuapp.com/)
+## Live Video
 [Video Link](https://drive.google.com/file/d/1ZX0I8D2X5_92c6FhslilAcMEr-82VggH/view?usp=share_link)
 
 
