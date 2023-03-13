@@ -7,56 +7,43 @@
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
+- Ruby on Rails
+- Bootsrap
+- Git 
 
-## Live Demo (if available)
+## Live Demo 
 
-[Live Demo Link](https://livedemo.com)
+[Live Demo Link](https://transaction-system.herokuapp.com/)
+## Live Video
+[Video Link](https://drive.google.com/file/d/1ZX0I8D2X5_92c6FhslilAcMEr-82VggH/view?usp=share_link)
 
 
 ## Getting Started
 
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
-
 To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
+- computer
 
 ### Setup
-
-### Install
-
-### Usage
-
-### Run tests
-
-### Deployment
-
+- Run git clone `git@github.com:henrycode460/budget_app.git`
+- Run `bundle install`
 
 
 ## Authors
 
-👤 **Author1**
+👤 **Henry Varflay Singbeh**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@githubhandle](https://github.com/henrycode460)
+- Twitter: [@twitterhandle](https://www.linkedin.com/in/henry-varflay-singbeh)
+- LinkedIn: [LinkedIn](https://twitter.com/code460 )
 
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
 
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues/).
+Feel free to check the [issues page](https://github.com/henrycode460/budget_app/issues).
 
 ## Show your support
 
