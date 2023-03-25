@@ -3,7 +3,7 @@
 # Project Name
 
 > Description the project.
-
+This is a budget application that management your budget for various categories of items you purchase.
 
 ## Built With
 
